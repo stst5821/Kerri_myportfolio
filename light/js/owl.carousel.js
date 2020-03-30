@@ -209,7 +209,22 @@
 		fluidSpeed: false,
 		dragEndSpeed: false,
 
-		responsive: {},
+		responsive: {
+			// ブレイクポイント 0以上
+            0 : {
+                items : 1,
+            },
+            // ブレイクポイント 480以上
+            480 : {
+                items : 2,
+			},
+			780 : {
+                items : 3,
+            },
+			1000 : {
+                items : 4,
+            }
+		},
 		responsiveRefreshRate: 200,
 		responsiveBaseElement: window,
 
