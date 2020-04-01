@@ -26,10 +26,12 @@
     <!-- Animate Css -->
     <link rel="stylesheet" href="css/animate.min.css">
 
-    <!-- OWL SLIDER -->
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/owl.theme.css" />
-    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <!-- jquery CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper.css" />
 
     <!-- wow -->
     <link rel="stylesheet" href="css/animate.css">
@@ -41,6 +43,8 @@
 </head>
 
 <body>
+
+
 
     <!-- Loader -->
     <div id="preloader">
@@ -96,7 +100,30 @@
 
     <!-- START HOME -->
     <section class="section header-bg-img h-100vh" id="home">
-        <div class="bg-overlay"></div>
+        <!-- <div class="bg-overlay"></div> -->
+
+        <section id="mvbox">
+            <div id="mv" class="player" data-property="{
+                videoURL:'https://www.youtube.com/watch?v=9KLD9lhWdPk',
+                containment:'#mvbox',
+                autoPlay:true,
+                loop:true,
+                mute:true,
+                vol:50,
+                showControls:false,
+                stopMovieOnBlur:false,
+                startAt:7,
+                opacity:1,
+            }"></div>
+        </section>
+
+        <script>
+            // YTPlayer実行
+            $(function () {
+                $("#mv").mb_YTPlayer();
+            });
+        </script>
+
         <div class="header-table">
             <div class="header-table-center">
                 <div class="container">
@@ -106,11 +133,10 @@
                                 <h4 class="text-white first-title mb-4">Welcome</h4>
                                 <h1 class="header-name text-white text-capitalize mb-0">I'M <span
                                         class="element font-weight-bold" data-elements="Esty,A web coder."></span></h1>
-                                <p class="text-white mx-auto header-desc mt-4">It is a long established fact that a
-                                    reader will be of a page when established fact looking at its layout.</p>
-                                <div class="mt-4 pt-2">
+                                <p class="text-white mx-auto header-desc mt-4">まごころ込めてWebサイト制作いたします。</p>
+                                <!-- <div class="mt-4 pt-2">
                                     <a href="#" class="btn btn-outline-custom btn-round">Download Cv</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -148,9 +174,9 @@
                         <p class="text-muted mt-2">
                             progate、ドットインストールにてHTML,css,bootstrap,jqueryを学び、サイト模写やXDデータからのサイト作成を行う。
                         </p>
-                        <p class="text-muted mt-2">
+                        <!-- <p class="text-muted mt-2">
                             現在は
-                        </p>
+                        </p> -->
                         <div>
                             <ul class="mb-0 about-social list-inline mt-4">
                                 <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-dribbble"></i></a></li>
@@ -174,8 +200,8 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2>My <span class="font-weight-bold">Services</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
-                            will be of a page when established fact looking at its layout.</p>
+                        <!-- <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
+                            will be of a page when established fact looking at its layout.</p> -->
                     </div>
                 </div>
             </div>
@@ -278,10 +304,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <h2>I Am Available For Freelancer.</h2>
+                        <h2>お問い合わせはこちらから</h2>
                     </div>
                     <div class="text-center mt-4">
-                        <a href="#" class="btn btn-custom">Hire Me!</a>
+                        <a href="#contact" class="btn btn-custom">Hire Me!</a>
                     </div>
                 </div>
             </div>
@@ -296,74 +322,39 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2>My <span class="font-weight-bold">Skills</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
-                            will be of a page when established fact looking at its layout.</p>
+                        <!-- <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
+                            will be of a page when established fact looking at its layout.</p> -->
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 pt-4">
-                <div class="col-lg-12">
-                    <div id="owl-demo" class="owl-carousel">
-                        <div class="text-center testi_boxes mx-auto">
-                            <div class="tam_testi_icon text-custom">
-                                <i class="mbri-quote-left"></i>
-                            </div>
-                            <div class="mt-2">
-                                <div>
-                                    <img src="images/HTML5.png" alt="" class="mx-auto img-fluid d-block">
-                                </div>
-                                <p class="client_review font-italic mt-4 text-center text-muted">" HTML5 "</p>
-                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span
-                                        class="font-weight-bold">Envato</span></p>
-                            </div>
-                        </div>
 
-                        <div class="text-center testi_boxes mx-auto">
-                            <div class="tam_testi_icon text-custom">
-                                <i class="mbri-quote-left"></i>
-                            </div>
-                            <div class="mt-2">
-                                <div>
-                                    <img src="images/css-3.svg" alt="" class="mx-auto img-fluid d-block">
-                                </div>
-                                <p class="client_review font-italic mt-4 text-center text-muted">" CSS3 "</p>
-                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span
-                                        class="font-weight-bold">Envato</span></p>
-                            </div>
-                        </div>
-
-                        <div class="text-center testi_boxes mx-auto">
-                            <div class="tam_testi_icon text-custom">
-                                <i class="mbri-quote-left"></i>
-                            </div>
-                            <div class="mt-2">
-                                <div>
-                                    <img src="images/jquery.svg" alt="" class="mx-auto img-fluid d-block">
-                                </div>
-                                <p class="client_review font-italic mt-4 text-center text-muted">" jquery "</p>
-                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span
-                                        class="font-weight-bold">Envato</span></p>
-                            </div>
-                        </div>
-
-                        <div class="text-center testi_boxes mx-auto">
-                            <div class="tam_testi_icon text-custom">
-                                <i class="mbri-quote-left"></i>
-                            </div>
-                            <div class="mt-2">
-                                <div>
-                                    <img src="images/bootstrap-4.svg" alt=""
-                                        class="mx-auto img-fluid d-block">
-                                </div>
-                                <p class="client_review font-italic mt-4 text-center text-muted">" Bootstrap4 "</p>
-                                <p class="client_name text-center mb-0 mt-4">- Ebony verty, <span
-                                        class="font-weight-bold">Envato</span></p>
-                            </div>
-                        </div>
-
+            <!-- Slider main container -->
+            <div class="swiper-container mt-5">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="/images/HTML5.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/css-3.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/jquery.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/jquery.svg" alt="">
                     </div>
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
+
+
         </div>
     </section>
     <!-- END CLIENT -->
@@ -374,25 +365,25 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <h2>Our <span class="font-weight-bold">Works</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
-                            will be of a page when established fact looking at its layout.</p>
+                        <h2>My <span class="font-weight-bold">Portfolio</span></h2>
+                        <!-- <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
+                            will be of a page when established fact looking at its layout.</p> -->
                     </div>
                 </div>
             </div>
             <div class="row mt-5 ">
                 <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
                     <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
-                    <!-- <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li> -->
-                    <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".seo">ポートフォリオ</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".webdesign">模写</a></li>
+                    <li class="list-inline-item"><a class="" data-filter=".WORK">XDコーディング</a></li>
+                    <!-- <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li> -->
                 </ul>
             </div>
         </div>
         <div class="container">
             <div class="row mt-4 work-filter">
-                <div class="col-lg-4 work_item webdesign">
+                <div class="col-lg-4 work_item WORK">
                     <a href="images/Daytora_page.png" class="img-zoom">
                         <div class="work_box">
                             <div class="work_img">
@@ -415,42 +406,44 @@
                                     alt="work-img">
                             </div>
                             <div class="work_detail">
-                                <p class="mb-2">Webサイト模写</p>
+                                <p class="mb-2">WEBサイト模写</p>
                                 <h4 class="mb-0">https://flowr.is/ 模写</h4>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="col-lg-4 work_item seo wordpress">
-                    <a href="images/works/3.jpg" class="img-zoom">
+                <div class="col-lg-4 work_item seo">
+                    <a href="images/esty-studio_page.png" class="img-zoom">
                         <div class="work_box">
                             <div class="work_img">
-                                <img src="images/works/3.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                                <img src="images/esty-studio_thumbnail.png" class="img-fluid mx-auto d-block rounded"
+                                    alt="work-img">
                             </div>
                             <div class="work_detail">
-                                <p class="mb-2">Category</p>
-                                <h4 class="mb-0">Project Title</h4>
+                                <p class="mb-2">ポートフォリオ</p>
+                                <h4 class="mb-0">STUDIO ESTY</h4>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="col-lg-4 work_item wordpress WORK webdesign">
-                    <a href="images/works/4.jpg" class="img-zoom">
+                <div class="col-lg-4 work_item webdesign">
+                    <a href="images/lingage_page.png" class="img-zoom">
                         <div class="work_box">
                             <div class="work_img">
-                                <img src="images/works/4.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                                <img src="images/lingage_thumbnail.png" class="img-fluid mx-auto d-block rounded"
+                                    alt="work-img">
                             </div>
                             <div class="work_detail">
-                                <p class="mb-2">Category</p>
-                                <h4 class="mb-0">Project Title</h4>
+                                <p class="mb-2">WEBサイト模写</p>
+                                <h4 class="mb-0">https://www.linguage-school.jp/ 模写</h4>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="col-lg-4 work_item seo webdesign">
+                <!-- <div class="col-lg-4 work_item seo webdesign">
                     <a href="images/works/5.jpg" class="img-zoom">
                         <div class="work_box">
                             <div class="work_img">
@@ -462,9 +455,9 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
 
-                <div class="col-lg-4 work_item devlopment webdesign">
+                <!-- <div class="col-lg-4 work_item devlopment webdesign">
                     <a href="images/works/6.jpg" class="img-zoom">
                         <div class="work_box">
                             <div class="work_img">
@@ -476,7 +469,8 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
+
             </div>
         </div>
     </section>
@@ -489,8 +483,8 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2>My <span class="font-weight-bold">Blog</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
-                            will be of a page when established fact looking at its layout.</p>
+                        <!-- <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
+                            will be of a page when established fact looking at its layout.</p> -->
                     </div>
                 </div>
             </div>
@@ -518,7 +512,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mt-3">
+                <!-- <div class="col-lg-4 mt-3">
                     <div class="rounded bg-white p-2">
                         <div class="img_blog">
                             <img src="images/blog/blog-2.jpg" alt="" class="img-fluid rounded mx-auto d-block">
@@ -537,8 +531,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mt-3">
+                </div> -->
+                <!-- <div class="col-lg-4 mt-3">
                     <div class="rounded bg-white p-2">
                         <div class="img_blog">
                             <img src="images/blog/blog-3.jpg" alt="" class="img-fluid rounded mx-auto d-block">
@@ -557,7 +551,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -570,8 +564,10 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2><span class="font-weight-bold">Contact</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader
-                            will be of a page when established fact looking at its layout.</p>
+                        <p class="text-muted mx-auto section-subtitle mt-3">
+                            案件の依頼、見積もり、ご相談の際は、以下のフォームからお問合わせください。<br>
+                            1~3営業日以内に返信いたします。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -587,7 +583,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="text-center">
                         <div>
                             <i class="mbri-letter text-custom h1"></i>
@@ -597,8 +593,8 @@
                             <p class="text-muted">stst5821＠gmail.com</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                </div> -->
+                <div class="col-lg-12">
                     <div class="text-center">
                         <div>
                             <i class="mbri-pin text-custom h1"></i>
@@ -639,7 +635,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group mt-2">
                                         <textarea name="comments" id="comments" rows="4" class="form-control"
-                                            placeholder="メッセージ内容"></textarea>
+                                            placeholder="お問い合わせ内容"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -665,16 +661,20 @@
                 <div class="col-md-12">
                     <div class="text-center text-white footer-alt">
                         <ul class="list-unstyled list-inline mb-3">
-                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook text-muted"></i></a>
+                            <!-- <li class="list-inline-item">
+                                <a href="#"><i class="mdi mdi-facebook text-muted"></i></a>
                             </li>
-                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin text-muted"></i></a>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="mdi mdi-linkedin text-muted"></i></a>
                             </li>
-                            <li class="list-inline-item"><a href="#"><i class="mdi mdi-pinterest text-muted"></i></a>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="mdi mdi-pinterest text-muted"></i></a>
+                            </li> -->
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/toshow0083"><i class="mdi mdi-twitter"></i></a>
                             </li>
-                            <li class="list-inline-item"><a href="https://twitter.com/toshow0083"><i
-                                        class="mdi mdi-twitter"></i></a></li>
                         </ul>
-                        <p class="text-muted mb-0"> 2020 &copy; Esty. Design by SRBThemes.</p>
+                        <p class="text-muted mb-0"> 2020 &copy; STUDIO Esty.</p>
                     </div>
                 </div>
             </div>
@@ -686,7 +686,8 @@
     <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
     <!-- JAVASCRIPTS -->
-    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.js"></script>
+
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--EASING JS-->
@@ -699,11 +700,13 @@
     <!-- TYPED -->
     <script src="js/typed.js"></script>
     <!-- OWL CAROUSEL -->
-    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
     <!-- CONTACT JS -->
     <script src="js/contact.js"></script>
     <!--CUSTOM JS-->
     <script src="js/custom.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>

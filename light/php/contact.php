@@ -14,18 +14,18 @@ $email    = $_POST['email'];
 $comments = $_POST['comments'];
 
 if(trim($name) == '') {
-	echo '<div class="error_msg">You must enter your name.</div>';
+	echo '<div class="error_msg">お名前を入力してください。</div>';
 	exit();
 } else if(trim($email) == '') {
-	echo '<div class="error_msg">Please enter a valid email address.</div>';
+	echo '<div class="error_msg">メールアドレスを入力してください。</div>';
 	exit();
 } else if(!isEmail($email)) {
-	echo '<div class="error_msg">You have entered an invalid e-mail address. Please try again.</div>';
+	echo '<div class="error_msg">無効なメールアドレスです。入力内容をご確認のうえ、もう一度お試しください。</div>';
 	exit();
 }
 
 if(trim($comments) == '') {
-	echo '<div class="error_msg">Please enter your message.</div>';
+	echo '<div class="error_msg">お問い合わせ内容を入力してください。</div>';
 	exit();
 }
 
@@ -39,7 +39,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@example.net";
-$address = "example@example.net";
+$address = "stst5821@gmail.com";
 
 
 // Configuration option.
@@ -72,8 +72,8 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_msg'>";
-	echo "<h3>Email Sent Successfully.</h3>";
-	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
+	echo "<h3>送信完了</h3>";
+	echo "<p><strong>$name</strong>様、お問い合わせありがとうございます。通常2～3営業日以内にご返信いたします。</p>";
 	echo "</div>";
 	echo "</fieldset>";
 
